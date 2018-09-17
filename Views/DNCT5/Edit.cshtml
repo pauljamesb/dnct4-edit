@@ -1,0 +1,24 @@
+@model DNCT5.Models.Item
+
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+<form method="post" asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <label asp-for="Name"></label><br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <input type="submit" asp-route-id="@Model.Id" value="Update" />
+    <a asp-action="Index">Back to list</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
