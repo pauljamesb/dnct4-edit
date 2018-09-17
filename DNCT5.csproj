@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-DNCT5-DA5FA503-57A3-415A-A5C2-ECE96CB348BD</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NOTES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="NOTES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
